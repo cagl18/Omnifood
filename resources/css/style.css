@@ -10,6 +10,9 @@
     padding: 0px;
     box-sizing: border-box; /*make total div size(including margin and padding) the specify width and height values. */
 }
+*:focus {
+    outline: none;
+}
 html {
     background-color: #FFF;
     color: #555;
@@ -395,6 +398,72 @@ cite img {
 input[type="checkbox"]{
     margin: 10px 5px 10px 0;
 }
-*:focus {
-    outline: none;
+/* --------------------------------------------------------------------------------------------------- */
+/* FOOTER*/
+/* --------------------------------------------------------------------------------------------------- */
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+.footer-nav {
+    list-style: none;
+    float:left;
+}
+.social-links {
+    list-style: none;
+    float:right;
+}
+.footer-nav li,
+.social-links li {
+    display: inline;
+    margin-right:20px;
+}
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right:0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+.social-links li a:link,
+.social-links li a:visited{
+    font-size:160%;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-instagram,
+.ion-logo-snapchat {
+    transition: color 0.2s;
+}
+
+.ion-logo-facebook:hover {
+    color: #3b5998;
+}
+.ion-logo-twitter:hover {
+    color: #1da1f2;
+}
+.ion-logo-instagram:hover {
+    color: #4c5fd7;
+}
+.ion-logo-snapchat:hover {
+    color: #fffc00;
+}
+
+footer p {
+    color:#888;
+    text-align: center;
+    margin-top: 20px;;
 }
