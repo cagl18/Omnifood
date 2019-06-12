@@ -118,7 +118,7 @@ a:hover, a:active {
 }
 
 /* ------- BUTTONS ------- */
-.btn:link, .btn:visited {
+.btn:link, .btn:visited, input[type="submit"] {
    display: inline-block; /* inline-block, it does not cause a line-break but can have padding and margin. */
    padding: 10px 30px;
    font-weight: 300;
@@ -127,18 +127,19 @@ a:hover, a:active {
    border: 1px solid #e67e22;
    transition: background-color 0.2s, border 0.2s, color 0.2s; /* properties changes 0.2 seconds delay, smooth transition */
 }
-.btn-full, .btn-full:visited {
+.btn-full:link, .btn-full:visited, input[type="submit"] {
     background-color: #e67e22;
     color: #fff;
     margin-right: 15px;
 }
-.btn-ghost, .btn-ghost:visited {
+.btn-ghost:link, .btn-ghost:visited {
     color:#e67e22;
 }
 .btn:hover, .btn:active{
     background-color: #cf6d17;
 }
-.btn-full:hover, .btn-full:active {
+.btn-full:hover, .btn-full:active,  
+input[type="submit"]:hover, input[type="submit"]:active {
     background-color: #cf6d17;
     color: #fff; 
 }
@@ -373,4 +374,27 @@ cite img {
 }
 .plan-box ul li {
     padding: 5px 0;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+/* CONTACT FORM */
+/* --------------------------------------------------------------------------------------------------- */
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+.contact-form input[type='text'], input[type='email'], select, textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.contact-form textarea {
+    height:100px;
+}
+input[type="checkbox"]{
+    margin: 10px 5px 10px 0;
+}
+*:focus {
+    outline: none;
 }
