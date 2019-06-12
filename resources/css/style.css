@@ -156,6 +156,7 @@ header {
     height: 100vh; /* this is 100% of the viewport(vertical height) */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
 }
 .hero-text-box {
     position: absolute;
@@ -292,4 +293,39 @@ header {
 }
 .box h3 {
     text-align: center;
+}
+/* --------------------------------------------------------------------------------------------------- */
+/* CUSTOMER TESTIMONIALS */
+/* --------------------------------------------------------------------------------------------------- */
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/back-customers.jpg');
+    background-size: cover;
+    color:#FFF;
+    background-attachment: fixed; /*keep the image in the same place, div will scroll to reveal / cover it. */
+}
+blockquote {
+    padding: 2%;
+    font-style:italic;
+    line-height: 145%;
+    position: relative;
+    margin-top:40px;
+} 
+blockquote:before{
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top:-5px;
+    left:-5px;
+}
+cite {
+    display: block;
+    font-size: 90%;
+    margin-top: 25px;
+}
+cite img {
+    height: 45px;
+    border-radius: 50px;
+    margin-right:10px;
+    vertical-align: middle;
 }
