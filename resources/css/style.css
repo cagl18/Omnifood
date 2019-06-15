@@ -8,18 +8,20 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box; /*make total div size(including margin and padding) the specify width and height values. */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /*make total div size(including margin and padding) the specify width and height values. */
 }
 *:focus {
     outline: none;
 }
-html {
+html, body {
     background-color: #FFF;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif; /*if Lato and Arial are not available, any sans-serif fonts will be used.  */
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x:hidden; /* hide content that goes outside the screen width*/
 }
 .clearfix {zoom: 1}
 .clearfix:after {
@@ -113,6 +115,7 @@ a:link, a:visited {
     text-decoration: none;
     padding-bottom:1px;
     border-bottom: 1px solid #e67e22; 
+    -webkit-transition: border-bottom 0.2s, color 0.2s; 
     transition: border-bottom 0.2s, color 0.2s;
 }
 a:hover, a:active {
@@ -128,6 +131,7 @@ a:hover, a:active {
    text-decoration: none;
    border-radius: 200px;
    border: 1px solid #e67e22;
+   -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
    transition: background-color 0.2s, border 0.2s, color 0.2s; /* properties changes 0.2 seconds delay, smooth transition */
 }
 .btn-full:link, .btn-full:visited, input[type="submit"] {
@@ -156,6 +160,7 @@ input[type="submit"]:hover, input[type="submit"]:active {
 /* --------------------------------------------------------------------------------------------------- */
 
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('img/hero.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg'); /* overlaying two images, gradient plus regular img */
     height: 100vh; /* this is 100% of the viewport(vertical height) */
     background-size: cover;
@@ -167,7 +172,8 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* translate the element 50% of its width and height to the top and left. */
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* translate the element 50% of its width and height to the top and left. */
 }
 .logo{
     height: 100px;
@@ -192,6 +198,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 .main-nav li a:hover,
@@ -204,6 +211,10 @@ header {
 
 .section-features .long-copy {
     margin-bottom: 30px;
+}
+
+.section-features .box {
+    text-align: center;
 }
 
 /* --------------------------------------------------------------------------------------------------- */
@@ -231,12 +242,17 @@ header {
     opacity: 0.7;
     width: 100%;
     height: auto;
-    transform: scale(1.15); /* image is 115% */
-    transition: transform 0.5s, opacity 0.5s; /* animate / delay for 0.5s zooming and opacity changes*/
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); /* image is 115% */
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /* animate / delay for 0.5s zooming and opacity changes*/
 }
 .meal-photo img:hover {
     opacity: 1;
-    transform: scale(1.03); /* set image width back to 103% */
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03); /* set image width back to 103% */
 }
 
 /* --------------------------------------------------------------------------------------------------- */
@@ -272,7 +288,7 @@ header {
     text-align:center;
     padding: 5px;
     display:inline-block;
-    float:left; /* this cause the element to be on the same line as the 'p' element since the 'display' i sset to 'inline-block' */
+    float:left; /* this cause the element to be on the same line as the 'p' element since the 'display' is set to 'inline-block' */
     font-size: 150%; 
     margin-right: 25px;
 }
@@ -302,6 +318,7 @@ header {
 /* CUSTOMER TESTIMONIALS */
 /* --------------------------------------------------------------------------------------------------- */
 .section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url('img/back-customers.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/back-customers.jpg');
     background-size: cover;
     color:#FFF;
@@ -344,7 +361,8 @@ cite img {
     border-radius: 5px;
     width: 90%;
     margin-left:5%;
-    box-shadow: 0 2px 2px efefef; /* x-axis, y-axis, blur, color */
+    -webkit-box-shadow: 0 2px 2px efefef;
+            box-shadow: 0 2px 2px efefef; /* x-axis, y-axis, blur, color */
 }
 .plan-box div {
     padding: 15px;
@@ -430,6 +448,7 @@ footer {
     text-decoration: none;
     border: 0;
     color: #888;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -446,6 +465,7 @@ footer {
 .ion-logo-twitter,
 .ion-logo-instagram,
 .ion-logo-snapchat {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
