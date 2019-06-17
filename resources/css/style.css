@@ -161,8 +161,8 @@ input[type="submit"]:hover, input[type="submit"]:active {
 /* --------------------------------------------------------------------------------------------------- */
 
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('img/hero.jpg');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg'); /* overlaying two images, gradient plus regular img */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('img/hero-min.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero-min.jpg'); /* overlaying two images, gradient plus regular img */
     height: 100vh; /* this is 100% of the viewport(vertical height) */
     background-size: cover;
     background-position: center;
@@ -366,8 +366,8 @@ header {
 /* CUSTOMER TESTIMONIALS */
 /* --------------------------------------------------------------------------------------------------- */
 .section-testimonials {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url('img/back-customers.jpg');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/back-customers.jpg');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url('img/back-customers-min.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/back-customers-min.jpg');
     background-size: cover;
     color:#FFF;
     background-attachment: fixed; /*keep the image in the same place, div will scroll to reveal / cover it. */
